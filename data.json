@@ -1,0 +1,48 @@
+{
+    "menu": [
+        {
+            "jenis": "Makanan Ringan",
+            "nama": "Kerupuk udang",
+            "deskripsi": "Kerupuk ini rasanya udang",
+            "harga": "Rp. 5.000",
+            "estimasi": "1 menit",
+            "gambar": "./images/kerupuk-udang.jpeg"
+            
+        },
+        {
+            "jenis": "Makanan Ringan",
+            "nama": "Kerupuk Nasi",
+            "deskripsi": "Kerupuk ini rasanya kayak nasi",
+            "harga": "Rp. 3.000",
+            "estimasi": "1 menit",
+            "gambar": "./images/kerupuk-nasi.jpeg"
+            
+        },
+        {
+            "jenis": "Makanan Berat",
+            "nama": "Nasi Goreng",
+            "deskripsi": "Nasi ini rasanya kayak digoreng",
+            "harga": "Rp. 15.000",
+            "estimasi": "15 menit",
+            "gambar": "./images/nasi-goreng.jpeg"
+    
+        },
+        {
+            "jenis": "Makanan Berat",
+            "nama": "Pecel lele",
+            "deskripsi": "Nasi ini seperti pecel lele",
+            "harga": "Rp. 18.000",
+            "estimasi": "18 menit",
+            "gambar": "./images/pecel-lele.jpeg"
+        },
+        {
+            "jenis": "Makanan Berat",
+            "nama": "Soto",
+            "deskripsi": "Makanan berkuah yang terbiasa sendiri",
+            "harga": "Rp. 15.000",
+            "estimasi": "12 menit",
+            "gambar": "./images/soto.jpeg"
+
+        }
+    ]
+}
