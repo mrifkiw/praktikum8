@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 8</title>
+    <link rel="stylesheet" href="dist/output.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data="getData()" x-init="init()" >
+    <nav class="flex flex-row m-10 gap-4 justify-center items-center">
+        <div class="nav-item">❤️‍🔥</div>
+        <div class="nav-item"> Restaurant UP </div>
+        <div class="px-6 py-4 rounded-md shadow w-fit">
+            <select name="jenis-makanan" id="jenis-makanan" class="bg-" autocomplete="off" x-model="search">
+                <option value="All">All</option>
+                <option value="Makanan Ringan">Makanan Ringan</option>
+                <option value="Makanan Berat">Makanan Berat</option>
+            </select>
+        </div>
+    </nav>
+
+    <div class="grid grid-cols-4 sm:grid-cols-auto p-10 gap-10">
+        <template x-for="item in data">
+            <div class="flex-col rounded-lg shadow p-5">
+                <img class="rounded-xl" x-init="$el.src = item.gambar">
+                <p class="font font-normal text-xl pt-5" x-text="item.nama"></p>
+                <p class="font-normal text-gray-500" x-text="item.deskripsi"></p>
+                <div class="flex flex-row justify-between items-center py-5">
+                    <p class="font-medium text-2xl text-" x-text="item.harga"></p>
+                    <p class="text-green-700" x-text="item.estimasi"></p>
+                </div>
+                <button class="py-5 px-10 bg-blue-500 rounded-lg shadow-blue-500 hover:bg-blue-300 text-white hover:-translate-y-0.5 font-medium transform transition">
+                    🚀 Pesan Sekarang
+                </button>
+        </div>
+        </template>
+    </div>
+
+    <script>
+        function getData() {
+            return {
+                data: [],
+                search: '',
+                init() {
+                    fetch("./data.json")
+                    .then(response => response.json())
+                    .then(data => this.data = data.menu)
+                },
+            }
+        }
+    </script>
+</body>
+</html>
